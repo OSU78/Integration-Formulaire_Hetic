@@ -83,6 +83,7 @@ footer {
     padding-top: 50px;
     color: white;
     background-color: var(--primaryColor);
+    
 }
 
 footer a {
@@ -90,11 +91,12 @@ footer a {
 }
 
 hr {
+    /* text-align: center; */
     border: 0px;
     border-top: 1px solid #6066a7cc;
-    width: 57%;
-    margin-left: 30%;
-    margin-right: 10%;
+    width: 70%;
+     margin-left: 15%; 
+     margin-right: 15%;
     margin-bottom: 50px;
 }
 
@@ -147,12 +149,13 @@ main {
 }
 
 .banner_section {
+    position: relative;
     display: flex;
     color: white;
     width: 80%;
     background-repeat: no-repeat;
     align-items: center;
-    background: linear-gradient(90deg, rgb(0 0 0 / 56%) 0%, rgb(0 0 0 / 79%) 80%, rgb(0 0 0 / 95%) 100%), url(/ressources/laptops-bg.jpg);
+    background: linear-gradient(90deg, rgb(114 114 114 / 1%) 0%, rgb(0 0 0 / 79%) 80%, rgb(0 0 0 / 95%) 100%), url(../ressources/laptops-bg.jpg);
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -172,10 +175,12 @@ position: absolute;
 writing-mode: vertical-rl;
 
 text-orientation: upright;
-top : 14%;
-left: calc(50% - 75px);
 
-font-size: 13px !important;
+top : 14%;
+
+left: calc(92% - 10px);
+
+font-size: 14px !important;
 }
 
 .input-custom {
@@ -205,9 +210,17 @@ font-size: 13px !important;
 
     top: -10px
 }
+.custom_checkbox{
+    margin: 5px;
+    
+}
 
 
-
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 .flex-item {
     display: flex;
     flex-direction: row;
@@ -334,16 +347,42 @@ main section:nth-child(2) {
         left: 10px;
         transition: .2s;
         font-size: 12px;
-        background-color: white;
+        background: rgb(205,205,205);
+background: -moz-linear-gradient(0deg, rgba(205,205,205,0) 0%, rgba(249,251,254,1) 41%);
+background: -webkit-linear-gradient(0deg, rgba(205,205,205,0) 0%, rgba(249,251,254,1) 41%);
+background: linear-gradient(0deg, rgba(205,205,205,0) 0%, rgba(249,251,254,1) 41%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdcdcd",endColorstr="#f9fbfe",GradientType=1);
         border-radius: 5px;
     }
 
+    .socialDiv{
+        position: absolute;
+        top: 92%;
+        left: 50%;
+        transition: all .2s;
+    }
+
+    .socialDiv ul{
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+    }
     main>section:nth-child(2){
         padding: 5%;
         padding-bottom: 5px;
     }
 
-@media (max-width:720px) {
+
+
+    @media (max-width:1400px){
+        .socialDiv{
+            left: 35%;
+            
+        }
+      
+    
+    }
+@media (max-width:1012px) {
 
     main {
         flex-wrap: wrap;
@@ -360,7 +399,8 @@ main section:nth-child(2) {
         display: none;
     }
     .flex_div{
-        justify-content: start;gap: 20px;
+        justify-content: center;
+        gap: 20px;
     }
     
     .banner_section {
@@ -369,7 +409,39 @@ main section:nth-child(2) {
           }
 
     .banner_section>article:nth-child(2) {
-        display: none;
+        /* display: none; */
+        left: 90%;
+        top: 18px;
+    }
+    .socialDiv{
+        left: 10%;
+        top:88%
+    }
+    
+    hr{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    footer{
+       
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width:475px){
+    .banner_section>article:nth-child(1){
+        font-size: 18px;
+    }
+
+    .contact_section{
+max-width: 80%;
+    }
+    .socialDiv{
+        left: 2%;
+    
     }
     
 
