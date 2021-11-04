@@ -430,7 +430,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdcdcd",endCo
 
 }
 
+@media (max-width:700px){
+    .inputDiv{
+        width:100%
+        }
+.flex-item{
+    flex-direction:column;
+}
+    
 
+}
 @media (max-width:475px){
     .banner_section>article:nth-child(1){
         font-size: 18px;
