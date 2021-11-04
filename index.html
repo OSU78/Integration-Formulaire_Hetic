@@ -1,13 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulaire Hetic 📑</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>ok</h1>
-</body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <section>
+        <img src="ressources/Logo_HETIC.png" alt="Logo-Hetic" width="170px" />
+      </section>
+      <section>
+        <nav class="flex_nav">
+          <ul>
+            <li><a href="#">Formations</a></li>
+            <li><a href="#">Vie etudiante</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">01.74.36.10.07</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <section class="banner_section">
+        <article class="contact_section">
+          <h2>CONTACTEZ-NOUS</h2>
+          <p>
+            L'équipe d'admission d'Hetic est disponible pour échager avec vous
+            sur votre projet d'orientation lors d'un rendez-vous &nbsp d'admission à
+            distance
+          </p>
+        </article>
+        <article>
+          <p>ECOLE DES METIER DU WEB</p>
+        </article>
+      </section>
+      <section >
+        <h1 class="customH1 center">Demandez un rendez-vous</h1>
+        <form autocomplete="off" class="form" action="#" method="post" style="z-index: 1;">
+          <aside class="flex-item">
+            <div class="inputDiv">
+              <label class="input_label lab1" for="prenom" onclick="outInLabelClick('lab1','in1')">Prénom*</label>
+              <input class="input-custom in1"  name="prenom" onfocusin="inApear('lab1','in1')" onfocusout="out('lab1','in1')" type="text">
+            </div>
+           <div class="inputDiv">
+            <label class="input_label lab2" for="prenom" onclick="outInLabelClick('lab2','in2')">Nom*</label>
+            <input class="input-custom in2" name="Nom" type="text" onfocusin="inApear('lab2','in2')" onfocusout="out('lab2','in2')"  >
+           </div>
+           
+          </aside>
+
+          <aside class="flex-item">
+            <div class="inputDiv">
+              <label class="input_label lab3" for="prenom" onclick="outInLabelClick('lab3','in3')">Numéro de télephone*</label>
+              <input class="input-custom in3"type="tel" onfocusin="inApear('lab3','in3')" onfocusout="out('lab3','in3')" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}">
+              </div>
+              <div class="inputDiv">
+              <label class="input_label lab4" for="société"onclick="outInLabelClick('lab4','in4')" >Société*</label>
+              <input class="input-custom in4" type="text"  onfocusin="inApear('lab4','in4')" onfocusout="out('lab4','in4')">  
+              </div>
+          </aside>
+          
+          <aside class="flex-item" style="flex-direction: column;">
+            <div class="inputDiv2">
+              <label class="input_label lab5" for="email" onclick="outInLabelClick('lab5','in5')">Adresse e-mail*</label>
+              <input class="input-custom in5 " name="email" type="email" onfocusin="inApear('lab5','in5')" onfocusout="out('lab5','in5')">
+            </div>
+            <div class="inputDiv2">
+              <label class="input_label lab6" for="objet" onclick="outInLabelClick('lab6','in6')"> Objet*</label>
+              <input class="input-custom in6" name="objet" type="text" onfocusin="inApear('lab6','in6')" onfocusout="out('lab6','in7')">
+            </div>
+            <div class="inputDiv2">
+            <label class="input_label lab7" for="message" onclick="outInLabelClick('lab7','in7')"> Message*</label>
+             <textarea name="message" class="input-custom in7" type="text" id="form-message" cols="30" rows="10"onfocusin="inApear('lab7','in7')" onfocusout="out('lab7','in7')"></textarea>
+            </div>
+            </aside>
+          
+          
+          <aside class="center">
+            <input class="form_btn" type="submit" value="JE PREND RENDEZ-VOUS"/>
+             <hr class="customHr"/>
+          </aside>
+        </form>
+       
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <div class="flex_div">
+        <section>
+          <img
+            class="footerImg"
+            src="ressources/logo-hetic-white.png"
+            alt="Logo hetic footer"
+            width="90px"
+          />
+          <p>@ 2020, Tout droits réservés</p>
+          <nav>
+            <ul>
+              <li><a href="#">Grande Ecole</a></li>
+              <li><a href="#">Bachelor Développeur Web</a></li>
+            </ul>
+          </nav>
+        </section>
+        <section>
+          <h2 class="customH2">Liens utiles</h2>
+          <nav>
+            <ul>
+              <li><a href="#">Insertions</a></li>
+              <li><a href="#">L'ecole</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </section>
+        <section>
+          <h2 class="customH2">Formations</h2>
+          <nav>
+            <ul>
+              <li><a href="#">Bachelor Webmarketing & UX</a></li>
+              <li><a href="#">Prépa Mastère Digital</a></li>
+              <li><a href="#">Mastère Big Data & IA</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </footer>
+
+    <script>
+    
+   function outInLabelClick(label,input){
+     let inputLabel=document.querySelector("."+label);
+     if(!inputLabel.classList.contains("input_labelSwipe")){
+  inputLabel.classList.add("input_labelSwipe")
+  document.querySelector("."+input).focus()
+  console.log ("ok")
+     }
+     
+   }
+     
+      function inApear(label,input){
+        console.log (label+','+input)
+        let labelClass=document.querySelector("."+label);
+        let inputClass=document.querySelector("."+input);
+        if(!inputClass.value && !labelClass.classList.contains("input_labelSwipe")){
+          
+          labelClass.classList.add("input_labelSwipe")
+         
+         
+        }
+       
+      }
+
+      function out(label,input){
+        console.log ("outttt")
+        let labelClass=document.querySelector("."+label);
+        let inputClass=document.querySelector("."+input);
+        if(!inputClass.value ){
+          
+          labelClass.classList.remove("input_labelSwipe")
+         
+        }
+       
+      }
+
+      
+    </script>
+  </body>
 </html>

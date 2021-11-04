@@ -1,7 +1,376 @@
-*{
-    font-size: "sans-serif";
+@font-face {
+    font-family: "Open Sans";
+    src: url("../ressources/font/openSans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Open SansLight";
+    src: url("../ressources/font/openSans/OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "Open SansBold";
+    src: url("../ressources/font/openSans/OpenSans-Bold.ttf");
+}
+
+
+* {
+    font-family: "Open Sans";
     margin: 0px;
     padding: 0px;
 }
 
+:root {
+    --primaryColor: #292d51;
+    --secondColor: #00c78f;
+    --secondColor2:#1acf9c;
 
+}
+
+body {
+    font-size: 15px;
+    min-height: 100vh;
+    /* 1 */
+    display: flex;
+    /* 2 */
+    flex-direction: column;
+    background-color: #f9fbfe;
+    /* 3 */
+}
+
+main {
+    flex-grow: 1;
+}
+
+header {
+    background-color: white;
+    border: none;
+    box-shadow: 0px 6px 20px rgb(60 60 60 / 11%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+a,
+li,
+nav,
+ul,
+ol {
+    transition: .2s;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: rgb(43, 43, 43);
+}
+
+a:hover {
+    color: var(--secondColor);
+    transition: .2s;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+
+
+footer {
+    padding: 7%;
+    padding-top: 50px;
+    color: white;
+    background-color: var(--primaryColor);
+}
+
+footer a {
+    color: white
+}
+
+hr {
+    border: 0px;
+    border-top: 1px solid #6066a7cc;
+    width: 57%;
+    margin-left: 30%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.customH1 {
+    font-family: "Open SansBold";
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.flex_nav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.flex_div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex_div a {
+    font-family: "Open SansLight";
+    transition: .2s;
+
+}
+
+.flex_div>section:nth-child(1) p {
+    color: rgb(114, 114, 114);
+    margin-bottom: 10px;
+}
+
+.customH2 {
+    font-family: "Open SansBold";
+    margin-bottom: 10px;
+
+}
+
+main {
+    display: flex;
+    gap: 35px;
+}
+
+.banner_section {
+    display: flex;
+    color: white;
+    width: 80%;
+    background-repeat: no-repeat;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(0 0 0 / 56%) 0%, rgb(0 0 0 / 79%) 80%, rgb(0 0 0 / 95%) 100%), url(/ressources/laptops-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.banner_section>article:nth-child(1) {
+    font-size: 20px;
+}
+.banner_section>article:nth-child(2) h2 {
+    font-size: 28px;
+
+}
+.banner_section>article:nth-child(2) {
+
+position: absolute;
+
+writing-mode: vertical-rl;
+
+text-orientation: upright;
+top : 14%;
+left: calc(50% - 75px);
+
+font-size: 13px !important;
+}
+
+.input-custom {
+    border-radius: 3px;
+    margin: 3.5px;
+    padding: 10px;
+    caret-color: #00c78f;
+    border: 1px solid rgba(212, 212, 212, 0.774);
+}
+
+.input-custom:focus {
+    border: 1px solid rgb(212, 212, 212);
+    outline-style: solid;
+    outline-color: var(--secondColor2);
+    outline-width: 1px;
+    transition: .2s;
+}
+
+.input-custom {
+    overflow: visible;
+}
+
+.input-custom::-webkit-input-placeholder {
+    text-overflow: ellipsis;
+    font-size: 11px;
+    color: #b9b8b8;
+
+    top: -10px
+}
+
+
+
+.flex-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-item div{
+    margin-top: 10px;
+}
+.contact_section {
+    max-width: 450px;
+    padding: 25px;
+}
+
+main section:nth-child(2) {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 2%;
+    width: 60%;
+}
+
+.custom_width {
+    width: 50%;
+}
+.customHr{
+    margin: 0px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    width: -webkit-fill-available;
+    border: none;
+    border-bottom: 1.2px solid rgb(211, 211, 211);
+}
+.form_btn {
+    background-color: var(--secondColor);
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid 2px transparent;
+    border-radius: 5px;
+    margin-top: 3%;
+    font-size: 17px;
+    width: 100%;
+    transition: .3s;
+    cursor: pointer;
+
+
+}
+.form_btn:hover{
+    background-color: white;
+    border : solid 2px var(--secondColor);
+    color: var(--secondColor);
+    transition: .2s;
+
+
+}
+
+.relative {
+    position: relative;
+    ;
+}
+/*
+.banner_section::after{
+    position: relative;
+    content: " ";
+    background-position: center;
+    background-image: url("../ressources/HETIC-logo3.png");
+    width: 291px;
+    background-size: cover;
+    left: 41px;
+    height: 80px;
+    z-index: inherit;
+    top: -241px;
+    transform: rotate(45deg);
+}
+/*
+.placeholder {
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    
+    padding: 5px;
+    font-size: 11px;
+    color: rgb(160, 160, 160);
+    animation: test .4s;
+}
+*/
+/*Normal
+.placeholder {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: white;
+    padding: 5px;
+    font-size: 12px;
+    color: rgb(160, 160, 160)}
+    */
+
+    .inputDiv{
+        position: relative;
+        width: 50%;
+    }
+    .inputDiv2{
+        position: relative;
+        width: 100%;
+
+    }
+    
+    .inputDiv2 input,textarea,.inputDiv input{
+        width: -webkit-fill-available;
+    }
+    .input_label{  
+        position: absolute;      
+        top: 3%;      
+        left: 10px;      
+        color: #b9b8b8;      
+        padding: 5px;      
+        font-size: 13px;      
+        transition: .1s;      
+        cursor: text;
+    }
+
+    .input_labelSwipe{
+        top: -10px;
+        left: 10px;
+        transition: .2s;
+        font-size: 12px;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    main>section:nth-child(2){
+        padding: 5%;
+        padding-bottom: 5px;
+    }
+
+@media (max-width:720px) {
+
+    main {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px;
+    }
+    main>section:nth-child(2){
+        /* text-align: center; */
+        width: 90%;
+    }
+    header{justify-content: center;}
+    .flex_nav{
+        
+        display: none;
+    }
+    .flex_div{
+        justify-content: start;gap: 20px;
+    }
+    
+    .banner_section {
+        width: 100%;
+        height: 80vh;
+          }
+
+    .banner_section>article:nth-child(2) {
+        display: none;
+    }
+    
+
+}
