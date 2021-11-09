@@ -265,9 +265,8 @@ main section:nth-child(2) {
 #form-message{
     max-height: 101px;
     margin: 3.49615px;
-    width: 483px;
+
     height: 80px;
-    max-width: 504px;
     min-height: 70px;
 }
 .form_btn {
