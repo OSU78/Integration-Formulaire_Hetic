@@ -381,6 +381,68 @@ textarea,
     gap: 5%;
 }
 
+.sectionMobile{
+    height: 25px;
+    position: relative;
+    
+}
+#burgerMenu{
+    top:17px;
+    height: 4px;
+    width: 35px;
+    background-color: #00c78f;
+    margin-right: 15px;
+    position: relative;
+    z-index: 9;
+}
+.sectionMobile:hover #burgerMenu{
+    cursor: pointer;
+    
+    transform: rotate(90deg) translate(-5px,5px);
+}
+#burgerMenu::after{
+    content: "";
+    display: block;
+    width: 35px;
+    background-color: #00c78f;
+    position: absolute;
+    top : -15px;
+    height: 4px;
+    z-index: 9;
+    transition: .2s;
+
+}
+
+#burgerMenu:active+.navMenu>ul {
+    transition: .3s;
+    border: solid 5px red ;
+    transform: scale(0);
+    transform-origin: top;
+    
+}
+#burgerMenu::before{
+    content: "";
+    display: block;
+    width: 35px;
+    background-color: #00c78f;
+    position: absolute;
+    top : -7px;
+    height: 4px;
+    z-index: 9;
+    transition: .2s;
+}
+.sectionMobile:hover #burgerMenu::before{
+    cursor: pointer;
+    transform: rotate(90deg);
+    left : 10px;
+    height: 5px;
+    width: 15px;
+}
+
+
+.sectionMobile{
+    display: none;
+}
 main>section:nth-child(2) {
     padding: 5%;
     padding-bottom: 5px;
@@ -411,12 +473,51 @@ main>section:nth-child(2) {
     }
 
     header {
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .flex_nav {
-
         display: none;
+        
+    }
+    .navMenu{
+        display: block;
+        position: relative;
+        
+    }
+    .navMenu>ul{
+        position: absolute;
+        left: -125px;
+        top: -5px;
+        border-radius: 7px;
+        background-color: white;
+        
+       flex-flow: column wrap;
+       z-index: 8;
+       transform: scaleY(0);
+       transform-origin: top;
+    }
+  
+    
+    .sectionMobile:hover .navMenu>ul {
+        cursor: pointer;
+        transform: scaleY(1);
+       transform-origin: top;
+       gap: 0px;
+    }
+
+
+
+    .sectionMobile .navMenu>ul>li{
+        padding: 10px;
+    }
+    .sectionMobile .navMenu>ul>li:hover{
+
+        background-color: #00c78f;
+       
+    }
+    .sectionMobile .navMenu>ul>li:hover a{
+       color: white;
     }
 
     .flex_div {
@@ -449,6 +550,10 @@ main>section:nth-child(2) {
     footer {
 
         text-align: center;
+    }
+
+    .sectionMobile{
+        display: block;
     }
 
 }
@@ -484,7 +589,7 @@ main>section:nth-child(2) {
     main>section:nth-child(2) {
         padding: 0%;
         padding-bottom: 5px;
-
-
     }
+
+   
 }
