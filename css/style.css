@@ -384,8 +384,10 @@ textarea,
 .sectionMobile{
     height: 25px;
     position: relative;
+  
     
 }
+
 #burgerMenu{
     top:17px;
     height: 4px;
@@ -393,11 +395,12 @@ textarea,
     background-color: #00c78f;
     margin-right: 15px;
     position: relative;
+    transition: .3s;
     z-index: 9;
 }
 .sectionMobile:hover #burgerMenu{
     cursor: pointer;
-    
+    transition: .3s;
     transform: rotate(90deg) translate(-5px,5px);
 }
 #burgerMenu::after{
@@ -412,7 +415,7 @@ textarea,
     transition: .2s;
 
 }
-
+/*
 #burgerMenu:active+.navMenu>ul {
     transition: .3s;
     border: solid 5px red ;
@@ -420,6 +423,7 @@ textarea,
     transform-origin: top;
     
 }
+*/
 #burgerMenu::before{
     content: "";
     display: block;
@@ -429,7 +433,7 @@ textarea,
     top : -7px;
     height: 4px;
     z-index: 9;
-    transition: .2s;
+    transition: .3s;
 }
 .sectionMobile:hover #burgerMenu::before{
     cursor: pointer;
@@ -437,6 +441,7 @@ textarea,
     left : 10px;
     height: 5px;
     width: 15px;
+    transition: .3s;
 }
 
 
@@ -486,6 +491,9 @@ main>section:nth-child(2) {
         
     }
     .navMenu>ul{
+        border-bottom: solid 10px #00c78f49;
+    }
+    .navMenu>ul{
         position: absolute;
         left: -125px;
         top: -5px;
@@ -505,6 +513,9 @@ main>section:nth-child(2) {
        transform-origin: top;
        gap: 0px;
     }
+
+    
+    
 
 
 
