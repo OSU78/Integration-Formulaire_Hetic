@@ -531,6 +531,8 @@ main>section:nth-child(2) {
         display: none;
     }
 
+    .articleImg2, .articleImg1{display: none;}
+
     main {
         flex-wrap: wrap;
         justify-content: center;
@@ -640,7 +642,7 @@ main>section:nth-child(2) {
         background-color: white;
         
        flex-flow: column wrap;
-       z-index: 8;
+       z-index: 985825;
        transform: scaleY(0);
        transform-origin: top;
     }
